@@ -1,1 +1,42 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body, html {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+
+body a, html a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  padding: 2em;
+}
+
+header .logo {
+  color: black;
+  font-weight: bold;
+}
+
+header .menu-btn {
+  width: 18px;
+  float: right;
+  cursor: pointer;
+}
+
+section {
+  padding: 4em;
+}
+
+section h1 {
+  font-size: 4em;
+  margin: 1em auto;
+  width: 70%;
+}
+
+section h1::before {
+  content: ' ';
+  border-top: 5px solid #c7c7c7;
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */
