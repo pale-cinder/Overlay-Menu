@@ -44,17 +44,20 @@ nav {
   position: absolute;
   background: black;
   padding: 2em;
-  width: calc(100%-4rem);
-  height: calc(100%-4rem);
+  width: calc(100%-4em);
+  height: calc(100vh-4em);
   display: none;
   -webkit-transform: scale(0);
           transform: scale(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 nav .close-btn {
   width: 18px;
   float: right;
   cursor: pointer;
+  opacity: 0;
 }
 
 nav ul {
@@ -81,10 +84,39 @@ nav ul span {
   margin-top: 20px;
 }
 
+nav ul li {
+  opacity: 0;
+}
+
 .show-menu {
   display: block;
   -webkit-animation: slide-menu 1s ease-in forwards;
           animation: slide-menu 1s ease-in forwards;
+}
+
+.show-menu .close-btn {
+  -webkit-animation: show-x 1s 1s forwards;
+          animation: show-x 1s 1s forwards;
+}
+
+.show-menu li:ntn-of-type(1) {
+  -webkit-animation: menu-item-anim 1s forwards1s ease-in-out;
+          animation: menu-item-anim 1s forwards1s ease-in-out;
+}
+
+.show-menu li:ntn-of-type(2) {
+  -webkit-animation: menu-item-anim 1.2s forwards1s ease-in-out;
+          animation: menu-item-anim 1.2s forwards1s ease-in-out;
+}
+
+.show-menu li:ntn-of-type(3) {
+  -webkit-animation: menu-item-anim 1.4s forwards1s ease-in-out;
+          animation: menu-item-anim 1.4s forwards1s ease-in-out;
+}
+
+.show-menu li:ntn-of-type(4) {
+  -webkit-animation: menu-item-anim 1.6s forwards1s ease-in-out;
+          animation: menu-item-anim 1.6s forwards1s ease-in-out;
 }
 
 @-webkit-keyframes slide-menu {
@@ -106,6 +138,50 @@ nav ul span {
   to {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-x {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes menu-item-anim {
+  from {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
