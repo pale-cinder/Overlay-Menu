@@ -39,4 +39,73 @@ section h1::before {
   border-top: 5px solid #c7c7c7;
   display: block;
 }
+
+nav {
+  position: absolute;
+  background: black;
+  padding: 2em;
+  width: calc(100%-4rem);
+  height: calc(100%-4rem);
+  display: none;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+nav .close-btn {
+  width: 18px;
+  float: right;
+  cursor: pointer;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 10% auto 0 auto;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  width: 80%;
+}
+
+nav ul a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+nav ul span {
+  color: gray;
+  display: block;
+  font-size: .75;
+  margin-top: 20px;
+}
+
+.show-menu {
+  display: block;
+  -webkit-animation: slide-menu 1s ease-in forwards;
+          animation: slide-menu 1s ease-in forwards;
+}
+
+@-webkit-keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes slide-menu {
+  from {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  to {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
 /*# sourceMappingURL=main.css.map */
