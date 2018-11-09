@@ -22,7 +22,10 @@ header {
     }
 
     .menu-btn {
+        position: absolute;
+        right: 10%;
         width: 18px;
+        height: 18px;
         float: right;
         cursor: pointer;
     }
