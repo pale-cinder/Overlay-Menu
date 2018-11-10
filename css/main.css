@@ -41,19 +41,20 @@ section h1::before {
 }
 
 nav {
-  position: absolute;
   background: black;
   padding: 2em;
   width: calc(100%-4em);
   height: calc(100vh-4em);
   display: none;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scaleX(0);
+  transform: scale(0);
   -webkit-transform-origin: right;
           transform-origin: right;
+  z-index: 1;
 }
 
 nav .close-btn {
+  color: white;
   width: 18px;
   float: right;
   cursor: pointer;
@@ -62,30 +63,36 @@ nav .close-btn {
 
 nav ul {
   list-style-type: none;
-  margin: 10% auto 0 auto;
+  margin: 1% auto 0 auto;
   padding: 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
-  width: 80%;
+  width: 100%;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  opacity: 1;
 }
 
 nav ul a {
   color: white;
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 24px;
+  margin-top: 20px;
+  z-index: 100;
 }
 
 nav ul span {
   color: gray;
   display: block;
-  font-size: .75;
-  margin-top: 20px;
+  font-size: 14px;
+  z-index: 100;
+  margin-bottom: 20px;
 }
 
 nav ul li {
-  opacity: 0;
+  opacity: 1;
 }
 
 .show-menu {
@@ -122,22 +129,22 @@ nav ul li {
 @-webkit-keyframes slide-menu {
   from {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
   to {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
 @keyframes slide-menu {
   from {
     -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    transform: scaleX(0);
   }
   to {
     -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
 
@@ -155,32 +162,6 @@ nav ul li {
     opacity: 0;
   }
   to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes menu-item-anim {
-  from {
-    -webkit-transform: translateY(60%);
-            transform: translateY(60%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes menu-item-anim {
-  from {
-    -webkit-transform: translateY(60%);
-            transform: translateY(60%);
-    opacity: 0;
-  }
-  to {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
     opacity: 1;
   }
 }
