@@ -40,18 +40,6 @@ section h1::before {
   display: block;
 }
 
-
-  .container {
-    background-color: black;
-    width: 1000px;
-    margin: 30px auto;
-
-    display: grid;
-    grid-template-rows: 150px 150px;
-    grid-template-columns: 150px 150px 150px;
-  }
-
-
 nav {
   background: black;
   padding: 2em;
@@ -79,7 +67,7 @@ nav ul {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (25%)[4];
+  /* -ms-grid-columns: (25%)[4]; */
       grid-template-columns: repeat(4, 25%);
   width: 100%;
   display: list-item;
@@ -178,3 +166,47 @@ nav ul li {
   }
 }
 /*# sourceMappingURL=main.css.map */
+
+
+.container {
+  background-color: black;
+  width: 1000px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 150px 150px;
+  grid-template-columns: 150px 150px 150px;
+
+}
+
+  .item {
+  padding: 20px;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: white;
+
+  &--1 {
+    background-color: #000000;
+  }
+
+  &--2 {
+    background-color: #202020;
+  }
+
+  &--3 {
+    background-color: #404040;
+  }
+
+  &--4 {
+    background-color: #606060;
+  }
+
+  &--5 {
+    background-color: #808080;
+  }
+
+  &--6 {
+    background-color: #A0A0A0;
+  }
+
+}
