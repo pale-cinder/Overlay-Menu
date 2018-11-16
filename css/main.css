@@ -67,7 +67,7 @@ nav ul {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  /* -ms-grid-columns: (25%)[4]; */
+  -ms-grid-columns: (25%)[4];
       grid-template-columns: repeat(4, 25%);
   width: 100%;
   display: list-item;
@@ -165,48 +165,53 @@ nav ul li {
     opacity: 1;
   }
 }
-/*# sourceMappingURL=main.css.map */
 
+main {
+  padding: 1px;
+}
 
-.container {
+main .container {
   background-color: black;
   width: 1000px;
   margin: 30px auto;
-
+  display: -ms-grid;
   display: grid;
-  grid-template-rows: 150px 150px;
-  grid-template-columns: 150px 150px 150px;
-
+  -ms-grid-rows: 150px 150px;
+      grid-template-rows: 150px 150px;
+  -ms-grid-columns: 150px 150px 150px;
+      grid-template-columns: 150px 150px 150px;
+  grid-row-gap: 10px;
+  grid-column-gap: 50px;
 }
 
-  .item {
+main .item {
   padding: 20px;
   font-size: 30px;
   font-family: sans-serif;
   color: white;
-
-  &--1 {
-    background-color: #000000;
-  }
-
-  &--2 {
-    background-color: #202020;
-  }
-
-  &--3 {
-    background-color: #404040;
-  }
-
-  &--4 {
-    background-color: #606060;
-  }
-
-  &--5 {
-    background-color: #808080;
-  }
-
-  &--6 {
-    background-color: #A0A0A0;
-  }
-
 }
+
+main .item--1 {
+  background-color: #000000;
+}
+
+main .item--2 {
+  background-color: #202020;
+}
+
+main .item--3 {
+  background-color: #404040;
+}
+
+main .item--4 {
+  background-color: #606060;
+}
+
+main .item--5 {
+  background-color: #808080;
+}
+
+main .item--6 {
+  background-color: #A0A0A0;
+}
+/*# sourceMappingURL=main.css.map */
