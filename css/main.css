@@ -176,10 +176,10 @@ main .container {
   margin: 30px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 150px 150px;
-      grid-template-rows: 150px 150px;
-  -ms-grid-columns: 150px 150px 150px;
-      grid-template-columns: 150px 150px 150px;
+  -ms-grid-rows: (150px)[2];
+      grid-template-rows: repeat(2, 150px);
+  -ms-grid-columns: (150px)[2] 1fr;
+      grid-template-columns: repeat(2, 150px) 1fr;
   grid-row-gap: 10px;
   grid-column-gap: 50px;
 }
@@ -187,7 +187,7 @@ main .container {
 main .item {
   padding: 20px;
   font-size: 30px;
-  font-family: sans-serif;
+  font-family: 'Montserrat';
   color: white;
 }
 
