@@ -239,8 +239,8 @@ main .gallery {
   display: grid;
   -ms-grid-rows: [header-start] 100px [header-end gallery-start] 200px [gallery-end main-start] 400px [main-end footer-start] 100px [footer-end];
       grid-template-rows: [header-start] 100px [header-end gallery-start] 200px [gallery-end main-start] 400px [main-end footer-start] 100px [footer-end];
-  -ms-grid-columns: (1fr)[3] 200px;
-      grid-template-columns: repeat(3, 1fr) 200px;
+  -ms-grid-columns: ([col-start] 1fr [col-end])[3] 200px [grid-end];
+      grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 200px [grid-end];
   grid-gap: 30px;
 }
 
@@ -253,25 +253,19 @@ main .gallery > * {
 }
 
 main .gallery .header {
-  grid-column: 1 / -1;
+  grid-column: col-start 1 / grid-end;
 }
 
 main .gallery .sidebar {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  grid-row: 2 / span 2;
+  grid-column: col-end 3 / grid-end;
+  grid-row: gallery-start / main-end;
 }
 
 main .gallery .main-content {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / span 3;
+  grid-column: col-start 1 / col-end 3;
 }
 
 main .gallery .footer {
-  grid-column: 1 / -1;
+  grid-column: col-start 1 / grid-end;
 }
 /*# sourceMappingURL=main.css.map */
