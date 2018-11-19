@@ -200,7 +200,7 @@ main {
     // grid-row-gap: 10px;
     // grid-column-gap: 50px;
     grid-gap: 10px;
-  }
+    }
   
   .item {
     padding: 20px;
@@ -246,5 +246,40 @@ main {
       background-color: #A0A0A0;
     }
   
+  }
+
+  //Type 1
+  .gallery {
+    width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-rows: 100px 200px 400px 100px;
+    grid-template-columns: repeat(3,1fr) 200px;
+    grid-gap: 30px;
+
+      & > * { //select all
+        background-color: #000000;
+        padding: 20px;
+        font-size: 30px;
+        font-family: 'Montserrat';
+        color: white;     
+      }
+
+      .header {
+          grid-column: 1 / -1;
+      }
+
+      .sidebar {
+          grid-column: 4 / 5;
+          grid-row: 2 / span 2;
+      }
+
+      .main-content {
+          grid-column: 1 / span 3;
+      }
+
+      .footer {
+          grid-column: 1 / -1;
+      }
   }
 }
