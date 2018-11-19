@@ -171,7 +171,6 @@ main {
 }
 
 main .container {
-  background-color: black;
   width: 1000px;
   margin: 30px auto;
   display: -ms-grid;
