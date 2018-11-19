@@ -237,8 +237,8 @@ main .gallery {
   margin: 30px auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 100px 200px 400px 100px;
-      grid-template-rows: 100px 200px 400px 100px;
+  -ms-grid-rows: [header-start] 100px [header-end gallery-start] 200px [gallery-end main-start] 400px [main-end footer-start] 100px [footer-end];
+      grid-template-rows: [header-start] 100px [header-end gallery-start] 200px [gallery-end main-start] 400px [main-end footer-start] 100px [footer-end];
   -ms-grid-columns: (1fr)[3] 200px;
       grid-template-columns: repeat(3, 1fr) 200px;
   grid-gap: 30px;
