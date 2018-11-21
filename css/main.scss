@@ -318,4 +318,13 @@ main {
           grid-column: col-start 1 / grid-end;
       }
   }
+
+  .person {
+      display: inline-block;
+      margin: 10px;
+      border: 1px solid black;
+      box-shadow: 0 2px 2px grey;
+      width: 200px;
+      padding: 20px;
+  }
 }

@@ -268,4 +268,14 @@ main .gallery .main-content {
 main .gallery .footer {
   grid-column: col-start 1 / grid-end;
 }
+
+main .person {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 2px 2px grey;
+          box-shadow: 0 2px 2px grey;
+  width: 200px;
+  padding: 20px;
+}
 /*# sourceMappingURL=main.css.map */
